@@ -1,0 +1,139 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Adaptive TikTok Strategy Assistant",
+    "version": "1.0.0",
+    "description": "This API enables a GPT to provide adaptive strategy suggestions for TikTok, including trend alerts, custom challenges, and interactive strategy discussions."
+  },
+  "servers": [
+    {
+      "url": "https://your-gpt-api-server.com/",
+      "description": "Main server for the Adaptive TikTok Strategy Assistant"
+    }
+  ],
+  "paths": {
+    "/identifyUserGoals": {
+      "post": {
+        "summary": "Identify User-Specific Goals",
+        "operationId": "identifyUserGoals",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userQuery": {
+                    "type": "string",
+                    "description": "User's query or statement regarding their TikTok goals."
+                  }
+                },
+                "required": ["userQuery"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User goals identified successfully."
+          }
+        }
+      }
+    },
+    "/profileAnalysisConsent": {
+      "post": {
+        "summary": "Secure Consent for Profile Analysis",
+        "operationId": "profileAnalysisConsent",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "string",
+                    "description": "Unique identifier for the user."
+                  }
+                },
+                "required": ["userId"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Consent for profile analysis secured."
+          }
+        }
+      }
+    },
+    "/trendAlertUpdates": {
+      "get": {
+        "summary": "Provide Latest TikTok Trend Alerts",
+        "operationId": "trendAlertUpdates",
+        "responses": {
+          "200": {
+            "description": "Latest TikTok trends provided successfully."
+          }
+        }
+      }
+    },
+    "/generateCustomChallenge": {
+      "post": {
+        "summary": "Generate Custom Challenge Ideas",
+        "operationId": "generateCustomChallenge",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userPreferences": {
+                    "type": "string",
+                    "description": "User's preferences or interests for challenge generation."
+                  }
+                },
+                "required": ["userPreferences"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Custom challenge generated successfully."
+          }
+        }
+      }
+    },
+    "/interactiveStrategySession": {
+      "post": {
+        "summary": "Conduct Interactive Strategy Q&A",
+        "operationId": "interactiveStrategySession",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userQuestions": {
+                    "type": "string",
+                    "description": "User's questions or topics for the strategy session."
+                  }
+                },
+                "required": ["userQuestions"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Interactive strategy session conducted successfully."
+          }
+        }
+      }
+    }
+  }
+}
