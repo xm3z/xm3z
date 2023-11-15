@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://your-gpt-api-server.com/",
+      "url": "https://github.com/xm3z/xm3z/blob/main/",
       "description": "Main server for the Adaptive TikTok Strategy Assistant"
     }
   ],
